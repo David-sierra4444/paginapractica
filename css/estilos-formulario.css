@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Faster+One&family=Jura:wght@300..700&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jura:wght@300..700&family=UnifrakturMaguntia&display=swap');
+body {
+font-family:'Dancing Script', cursive;
+background: #000000;
+background-attachment: fixed;
+}
+h1 {
+font-family: 'Dancing Script', cursive;
+text-align: center;
+font-size: 3em;
+color: #ffffff;
+font-weight: 100;
+}
+
+.row {
+background-image: url(../img/espacio\ azul.jpg); /*Se agrega una imagen de fondo para el
+ingreso.html*/
+background-size: cover;
+width: 420px;
+height: 450px;
+padding: 10px;
+margin: auto;
+/*border-top: 7px solid #e42148;*/
+}
+.form-p {
+padding: 5px;
+}
+/*input[type="text"],
+input[type="password"]
+Lo escrito anteriormente es lo mismo que decir .text*/
+.text{
+display: block;
+width: 85%;
+border: none;
+border-bottom: solid 1px #fff;
+padding: 1em;
+font-size: 1em;
+font-family:'Chelsea Market', cursive;
+color: #fff;
+margin: 35px 0 0;
+margin-left: 8px;
+outline: none;
+-webkit-transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+background-color: transparent;
+}
+/*::seudoelemento, el placeholder es la indicación que esta
+interna en el input donde ingresan los datos*/
+::-webkit-input-placeholder {
+color: #ffffff;
+font-family: 'Dosis', sans-serif;
+}
+input[type="submit"] {
+font-size: 1em;
+background-color: #00ff73;
+color: #000000;
+font-family:'Chelsea Market', cursive;
+width: 100%;
+height: 50px;
+
+outline: none;
+border: none;
+/*cursor: pointer;*/
+margin: 3em 0;
+-webkit-transition: 0.5s all;
+-ms-transition: 0.5s all;
+transition: 0.5s all;
+text-align: center;
+letter-spacing: 1px;
+}
+input[type="submit"]:hover {
+background-color: rgb(0, 234, 255);
+-webkit-tranform: translateY(9px);
+-ms-tranform: translateY(9px);
+-o-tranform: translateY(9px);
+transform: translateY(9px);
+}
+.form-p {
+margin-top: 5px;
+font-size: 1.1em;
+color: #000000;
+letter-spacing: 3px;
+text-align: center;
+}
+.form-p a {
+color: #da1111;
+text-decoration: none;
+-webkit-transition: .5s all;
+-ms-transition: .5s all;
+transition: .5s all;
+}
+.form-p a:hover {
+color: #1abc9c;
+}

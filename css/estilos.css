@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Faster+One&family=Jura:wght@300..700&family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jura:wght@300..700&family=UnifrakturMaguntia&display=swap');
+*{
+box-sizing: border-box;
+/*controlar dimensiones sin que se vean afectadas
+por el border o por el padding*/
+margin:0;
+padding: 0;
+}
+/*clases especiales*/
+.borde{
+border:1px solid gray;
+}
+.titulo{
+width: 100%;
+height: 50px;
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+/*contenedor para pantallas grandes*/
+.contenedor{
+width: 99%;
+max-width: 1280px;
+margin:auto; /*quede centrado*/
+}
+/*navegador*/
+nav{
+width: 100%;
+height: 50px;
+position: fixed;
+max-width: 1280px;
+}
+/*La suma da 100=65+15+20*/
+.logo{
+width: 20%;
+height: 100%;
+float: left;
+}
+.navegacion{
+
+width: 65%;
+height: 100%;
+float: left;
+}
+.ingreso{
+width: 15%;
+height: 100%;
+float: left;
+}
+/*niveles de navegación*/
+/*nivel 0*/
+nav ul{
+  list-style: none;/*para quitar viñetas*/
+  text-align: right;/*el elemento ul se desplaza a la derecha*/
+}
+nav ul li{
+  /*
+  display:inline-block;/*Dejar los elementos de forma horizontal*/
+  width: 130px;/*tamaño definido para todas las opciones (los elementos li)*/
+  /*se agrega el mismo color a todos los elementos de la
+barra de navegación*/
+background-color: #1696db;
+}
+/*Para que los elementos ocultos cuando pase el mouse, muestre
+los elementos ul*/
+nav ul li:hover>ul{
+display: block;
+}
+/*Para que los subítems queden como lo esperado*/
+nav .navegacion>ul>li{
+/*quiere decir que solo las etiquetas que estan directamente relacionadas
+con la clase navegación y solo las li van a tener dichas propuedades*/
+/*Se agrega el display*/
+display:inline-block;
+}
+/*Para que el elemento <li> complete el contenedor*/
+nav .ingreso ul li{
+width: 100%;
+}
+nav ul li a{
+  display:block; /*para poder colocarle un margin o un padding
+al elemento <a>*/
+text-decoration: none;/*quitar el subrayado del link del anchor <a>*/
+color: #ffffff;
+padding: 15px 2px; /*Recuerde que es arriba(15px)-derecha(2px)-abajo(15)-izquierda(2)*/
+text-align: center;
+border-bottom: 2px solid #00f2ff;/*borde inferior al elemento <a>*/
+}
+/*Recuerde hover es una pseudo-clase
+el proposito es que algo cambie o resalte cuando pase el cursor
+por descendencia el elemento <a> tendrá este efecto*/
+nav ul li a:hover{
+  background: rgba(81, 0, 255, 0.5);/*una opacidad mientras el puntero
+pasa sobre la opcion*/
+border-bottom: 2px solid rgb(0, 255, 247);
+}
+/*nivel 1 -primer despliegue*/
+nav li ul{
+  position: absolute;/*Los elemento ul
+mantengan la posición*/
+display: none;/*se ocultan los elementos del nivel 1*/
+}
+/*Para las subítems de la opción ingreso*/
+nav .ingreso li ul{
+width: 14%;/*Se coloca un ancho al elemento de la clase ingreso
+que sea acorde a lo que se necesita*/
+}
+nav li ul li{
+  position: relative;
+}
+/*nivel 2 -despligues laterales+*/
+nav li ul li ul{
+  left: 130px;/*desde la izquierda va a ocupar 130px*/
+top:2px;/*quede un poco abajo*/
+}
+/*encabezado*/
+header{
+width: 100%;
+height: 550px;
+/*depende del monitor*/
+background-image: url('../img/fondo-pagina.jpg');
+background-size:100% 100%;
+}
+/*portafolio*/
+/*#titulo1{
+width: 100%;
+height: 50px;
+}*/
+main#portafolio{/*tiene que estar pegado para que sepa que es de esa etiqueta
+si se separa pensara que es de alguna del interior*/
+width: 100%;
+height: 550px;
+background: rgb(255,255,255,0.9);/*transparencia 0.4*/
+}
+.div-porta{
+width: 33.33%;
+height:100%;
+float: left;
+}
+/*quinenes-somos*/
+/*#titulo2{
+width: 100%;
+height: 50px;
+}*/
+section#quienes-somos{
+width: 100%;
+height: 550px;
+}
+.fila{
+width: 100%;
+height: 33.33%;
+}
+.col-ext{
+width: 40%;
+height: 100%;
+float: left;
+}
+.col-cen{
+width: 20%;
+
+height: 100%;
+float: left;
+}
+/*contactenos*/
+/*#titulo3{
+width: 100%;
+height: 50px;
+}*/
+section#contactenos{
+width: 100%;
+height: 550px;
+}
+.div-contacto{
+width: 50%;
+height: 100%;
+float: left;
+}
+/*para el video*/
+.div-arr iframe{
+width: 100%;
+height: 100%;
+/*padding: 30px;/*para el vídeo*/
+border: 0;
+}
+.div-arr{
+width: 100%;
+height:70%;
+}
+.div-aba{
+width: 100%;
+height:30%;
+padding: 2px;
+background: rgb(255,255,255,0.9);
+text-align: center;
+}
+/*dirección contacto*/
+.direccion{
+margin-top: 10px;
+}
+/*redes sociales*/
+.facebook{
+width: 40px;
+height:40px;
+padding: 2px;
+margin-top: 10px;
+}
+/*footer*/
+footer{
+width: 100%;
+height: 50px;
+background-color:blue;
+}
+/*La suma da 100=65+15+20*/
+.logo{
+width: 20%;
+height: 100%;
+float: left;
+padding: 5px;/*no se pegue la imagen logo tanto al borde*/
+/*aplica para la imagen y letras*/
+text-align: center;
+}
+/*en su interior a otra caja cuando esten separados*/
+.logo img{
+/*width: auto;*/
+/*height: 100%; de los 50px*/
+width: 40px;
+height: 40px;
+border-radius: 50%;/*la imagen sea curva*/
+/*Si se quiere rendondez total se tiene que
+calcular en el ancho y alto en medida
+en pixeles. Teniendo en cuenta la
+altura nav 50px y padding de 5px*/
+}
+/*cuerpo*/
+body{
+background-image: url('../img/relojespacial.jpg');
+background-size: 100% 100%;
+background-attachment: fixed;/*la imagen se quede 
+fija*/
+font-family: 'Chelsea Market', cursive;
+font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight:weight;
+  font-style:normal;
+}
+/*navegador*/
+nav{
+width: 100%;
+height: 50px;
+background-color: #BED3FA;
+max-width: 1280px;
+}
+.titulo{
+width: 100%;
+height: 50px;
+/*padding: 10px;*/
+padding: 52px;
+background-color: rgb(0, 0, 0);
+font-family: 'Dancing Script', cursive;
+color:#ffffff;
+text-align: center;
+/*aumentar el titulo puede ser h1 pero...*/
+font-size: 25px;/*puede ser 2em*/
+}
+.div-porta{
+width: 33.33%;
+height:100%;
+float: left;
+text-align: center;
+padding: 50px;
+font-size: 13px;
+}
+.div-porta img{
+width: 150px;
+height: 150px;
+margin: 40px 0px 0px 0px;
+border-radius: 50%;
+}
+/*en div porta hay una etiqueta p que quiero este justificada*/
+.div-porta p{
+
+margin: 40px 0px 0px 0px;/*cuando hay 2 medidas afecta primero
+arriba y abajo y la otra es izq y der*/
+/*margin-top: 20px;*/
+text-align:justify;
+}
